@@ -8,3 +8,12 @@ scoreboard objectives add harvest.UUID.3 dummy
 
 # Step count for raycasting
 scoreboard objectives add harvest.ray.steps dummy
+
+# Calculation of the ray's position
+scoreboard objectives add harvest.ray.x dummy
+scoreboard objectives add harvest.ray.y dummy
+scoreboard objectives add harvest.ray.z dummy
+
+# Constant 100 for calculation
+scoreboard objectives add harvest.constant dummy
+scoreboard players set #100 harvest.constant 100

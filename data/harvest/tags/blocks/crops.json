@@ -1,8 +1,7 @@
 {
   "values": [
-      "minecraft:carrots",
-      "minecraft:potatoes",
       "minecraft:wheat",
-      "minecraft:beetroots"
+      "minecraft:beetroots",
+      "#harvest:self_crops"
   ]
 }

@@ -10,6 +10,8 @@ scoreboard players operation @s harvest.ray.z %= #100 harvest.constant
 # Figure out where to spawn the interaction entity
 execute align xyz run function harvest:raycast/summon_interaction
 
+execute store result score @e[tag=harvest.interaction.current] harvest.interaction.lifetime run scoreboard players get #initial harvest.interaction.lifetime
+
 # Copy the caster's UUID
 execute store result score @e[tag=harvest.interaction.current] harvest.UUID.0 run scoreboard players get @s harvest.UUID.0
 execute store result score @e[tag=harvest.interaction.current] harvest.UUID.1 run scoreboard players get @s harvest.UUID.1

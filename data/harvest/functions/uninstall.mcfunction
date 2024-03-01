@@ -6,16 +6,16 @@ scoreboard objectives remove harvest.UUID.1
 scoreboard objectives remove harvest.UUID.2
 scoreboard objectives remove harvest.UUID.3
 
-# Step count for raycasting
 scoreboard objectives remove harvest.ray.steps
 
-# Calculation of the ray's position
 scoreboard objectives remove harvest.ray.x
 scoreboard objectives remove harvest.ray.y
 scoreboard objectives remove harvest.ray.z
 
-# Constant 100 for calculation
 scoreboard objectives remove harvest.constant
+
+scoreboard objectives remove harvest.interaction.lifetime
+
 
 #> Entities
 

@@ -37,5 +37,5 @@ datapack disable "file/Effortless_Harvest_1.19.4_1.1.1.zip"
 
 datapack disable "file/Effortless Harvest"
 datapack disable "file/Effortless Harvest 1.19.4 1.1.1"
-datapack disable "file/Effortless_Harvest.zip"
-datapack disable "file/Effortless_Harvest_1.19.4_1.1.1.zip"
+datapack disable "file/Effortless_Harvest"
+datapack disable "file/Effortless_Harvest_1.19.4_1.1.1"

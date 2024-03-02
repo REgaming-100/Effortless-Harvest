@@ -1,10 +1,14 @@
 # Spawn the items
-execute on target if block ~ ~ ~ #harvest:crops run loot spawn ~ ~ ~ mine ~ ~ ~
+execute on target run tag @s add harvest.looter
+execute on attacker run tag @s add harvest.looter
+execute as @a[tag=harvest.looter] if block ~ ~ ~ #harvest:crops run loot spawn ~ ~ ~ mine ~ ~ ~
+tag @a remove harvest.looter
 
-# Decide next step based on crop type
-execute if block ~ ~ ~ #harvest:self_crops run function harvest:harvest/self_crops
-execute if block ~ ~ ~ wheat run function harvest:harvest/seed_crops {crop: wheat, seed: "wheat_seeds"}
-execute if block ~ ~ ~ beetroots run function harvest:harvest/seed_crops {crop: beetroots, seed: "beetroot_seeds"}
+# Decide next step based on interaction and crop type
+execute on attacker run setblock ~ ~ ~ air
+execute on target if block ~ ~ ~ #harvest:self_crops run function harvest:harvest/self_crops
+execute on target if block ~ ~ ~ wheat run function harvest:harvest/seed_crops {crop: wheat, seed: "wheat_seeds"}
+execute on target if block ~ ~ ~ beetroots run function harvest:harvest/seed_crops {crop: beetroots, seed: "beetroot_seeds"}
 
 # Revoke right to live early
 scoreboard players set @s harvest.interaction.lifetime 0

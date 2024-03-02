@@ -2,6 +2,6 @@
   "pack": {
     "description": "Harvest Crops without breaking them",
     "pack_format": 26,
-    "supported_formats": [12, 32]
+    "supported_formats": [16, 32]
   }
 }

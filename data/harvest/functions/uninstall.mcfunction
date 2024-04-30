@@ -16,6 +16,16 @@ scoreboard objectives remove harvest.constant
 
 scoreboard objectives remove harvest.interaction.lifetime
 
+scoreboard objectives remove harvest.config
+
+
+#> Tags
+
+tag @a remove harvest.defaulted
+
+tag @e remove harvest.removeTag
+tag @e remove harvest.crouchHarvest
+tag @e remove harvest.standHarvest
 
 #> Entities
 

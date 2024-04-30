@@ -16,6 +16,7 @@ scoreboard objectives remove harvest.constant
 
 scoreboard objectives remove harvest.interaction.lifetime
 
+scoreboard objectives remove harvest.sneak
 scoreboard objectives remove harvest.config
 
 

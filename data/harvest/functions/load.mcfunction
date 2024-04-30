@@ -21,3 +21,9 @@ scoreboard players set #100 harvest.constant 100
 # To keep track of the remaining lifetime of interactions
 scoreboard objectives add harvest.interaction.lifetime dummy
 execute unless score #initial harvest.interaction.lifetime = #initial harvest.interaction.lifetime run scoreboard players set #initial harvest.interaction.lifetime 3
+
+# Triggers
+scoreboard objectives add harvest.config trigger
+
+# Check sneak
+scoreboard objectives add harvest.sneak minecraft.custom:sneak_time

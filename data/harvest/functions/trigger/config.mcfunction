@@ -15,4 +15,4 @@ execute if entity @s[tag=!harvest.crouchHarvest] run summon area_effect_cloud ~ 
 
 tellraw @s [{"color":"dark_aqua","text":"----------------\n"},{"color":"white","text":"Harvesting"},{"color":"aqua","text":"\n→ "},{"color":"gray","text":"When standing: "},{"clickEvent":{"action":"run_command","value":"/trigger harvest.config set 2"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle"}]},"selector":"@e[type=area_effect_cloud,tag=harvest.standHarvest]"},{"color":"aqua","text":"\n→ "},{"color":"gray","text":"When crouching: "},{"clickEvent":{"action":"run_command","value":"/trigger harvest.config set 3"},"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle"}]},"selector":"@e[type=area_effect_cloud,tag=harvest.crouchHarvest]"},{"color":"dark_aqua","text":"\n----------------"}]
 
-scoreboard players reset @a harvest.config
+scoreboard players reset @s harvest.config

@@ -1,18 +1,10 @@
-execute if entity @s[scores={harvest.ray.x=..15,harvest.ray.y=..84,harvest.ray.z=..15}] run summon interaction ~0.4375 ~0.0 ~0.4375 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=..15,harvest.ray.y=..84,harvest.ray.z=16..84}] run summon interaction ~0.4375 ~0.0 ~0.5 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=..15,harvest.ray.y=..84,harvest.ray.z=85..}] run summon interaction ~0.4375 ~0.0 ~0.5625 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=..15,harvest.ray.y=85..,harvest.ray.z=..15}] run summon interaction ~0.4375 ~0.0625 ~0.4375 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=..15,harvest.ray.y=85..,harvest.ray.z=16..84}] run summon interaction ~0.4375 ~0.0625 ~0.5 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=..15,harvest.ray.y=85..,harvest.ray.z=85..}] run summon interaction ~0.4375 ~0.0625 ~0.5625 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=16..84,harvest.ray.y=..84,harvest.ray.z=..15}] run summon interaction ~0.5 ~0.0 ~0.4375 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=16..84,harvest.ray.y=..84,harvest.ray.z=16..84}] run summon interaction ~0.5 ~0.0 ~0.5 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=16..84,harvest.ray.y=..84,harvest.ray.z=85..}] run summon interaction ~0.5 ~0.0 ~0.5625 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=16..84,harvest.ray.y=85..,harvest.ray.z=..15}] run summon interaction ~0.5 ~0.0625 ~0.4375 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=16..84,harvest.ray.y=85..,harvest.ray.z=16..84}] run summon interaction ~0.5 ~0.0625 ~0.5 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=16..84,harvest.ray.y=85..,harvest.ray.z=85..}] run summon interaction ~0.5 ~0.0625 ~0.5625 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=85..,harvest.ray.y=..84,harvest.ray.z=..15}] run summon interaction ~0.5625 ~0.0 ~0.4375 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=85..,harvest.ray.y=..84,harvest.ray.z=16..84}] run summon interaction ~0.5625 ~0.0 ~0.5 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=85..,harvest.ray.y=..84,harvest.ray.z=85..}] run summon interaction ~0.5625 ~0.0 ~0.5625 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=85..,harvest.ray.y=85..,harvest.ray.z=..15}] run summon interaction ~0.5625 ~0.0625 ~0.4375 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=85..,harvest.ray.y=85..,harvest.ray.z=16..84}] run summon interaction ~0.5625 ~0.0625 ~0.5 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
-execute if entity @s[scores={harvest.ray.x=85..,harvest.ray.y=85..,harvest.ray.z=85..}] run summon interaction ~0.5625 ~0.0625 ~0.5625 {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}
+execute if score @s harvest.ray.x matches ..15 run data modify storage harvest:ray x set value 0.4375
+execute if score @s harvest.ray.x matches 16..84 run data modify storage harvest:ray x set value 0.5
+execute if score @s harvest.ray.x matches 85.. run data modify storage harvest:ray x set value 0.5625
+execute if score @s harvest.ray.y matches ..84 run data modify storage harvest:ray y set value 0.0
+execute if score @s harvest.ray.y matches 85.. run data modify storage harvest:ray y set value 0.0625
+execute if score @s harvest.ray.z matches ..15 run data modify storage harvest:ray z set value 0.4375
+execute if score @s harvest.ray.z matches 16..84 run data modify storage harvest:ray z set value 0.5
+execute if score @s harvest.ray.z matches 85.. run data modify storage harvest:ray z set value 0.5625
+
+function harvest:macro/summon_interaction with storage harvest:ray

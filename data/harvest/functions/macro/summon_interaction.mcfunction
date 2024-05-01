@@ -1,0 +1,1 @@
+$summon interaction ~$(x) ~$(y) ~$(z) {width: 1, height: 1, response: true, Tags: ["harvest.interaction", "harvest.interaction.current"]}

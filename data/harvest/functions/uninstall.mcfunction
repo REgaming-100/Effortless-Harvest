@@ -42,11 +42,11 @@ tellraw @s [{"text":"----------------\nThe Datapack\n","color":"gold"},{"text":"
 #> Disable
 
 datapack disable "file/Effortless Harvest.zip"
-datapack disable "file/Effortless Harvest 1.19.4 1.2.1.zip"
+datapack disable "file/Effortless Harvest 1.19.4 1.2.2.zip"
 datapack disable "file/Effortless_Harvest.zip"
-datapack disable "file/Effortless_Harvest_1.19.4_1.2.1.zip"
+datapack disable "file/Effortless_Harvest_1.19.4_1.2.2.zip"
 
 datapack disable "file/Effortless Harvest"
-datapack disable "file/Effortless Harvest 1.19.4 1.2.1"
+datapack disable "file/Effortless Harvest 1.19.4 1.2.2"
 datapack disable "file/Effortless_Harvest"
-datapack disable "file/Effortless_Harvest_1.19.4_1.2.1"
+datapack disable "file/Effortless_Harvest_1.19.4_1.2.2"
